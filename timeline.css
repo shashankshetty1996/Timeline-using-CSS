@@ -4,7 +4,6 @@
 }
 
 .timeline {
-	--bg-color: #0077B5;
 	position: relative;
 	margin: 50px auto;
 	padding: 40px 0;
@@ -15,9 +14,10 @@
 .timeline::before {
 	content: '';
 	position: absolute;
+	top: 100px;
 	left: 50%;
 	width: 2px;
-	height: 100%;
+	height: 85%;
 	background-color: #c5c5c5;
 }
 
@@ -25,6 +25,12 @@
 	content: '';
 	display: block;
 	clear: both;
+}
+
+.timeline h1 {
+	text-align: center;
+	color: #0077B5;
+	margin-bottom: 20px;
 }
 
 .timeline ul {
@@ -63,9 +69,9 @@
 	right: -6px;
 	width: 10px;
 	height: 10px;
-	background-color: var(--bg-color);
+	background-color: #0077B5;
 	border-radius: 50%;
-	box-shadow: 0 0 0 3px var(--bg-color);
+	box-shadow: 0 0 0 3px #0077B5;
 }
 
 .timeline ul li:nth-child(even)::before {
@@ -75,19 +81,21 @@
 	left: -4px;
 	width: 10px;
 	height: 10px;
-	background-color: var(--bg-color);
+	background-color: #0077B5;
 	border-radius: 50%;
-	box-shadow: 0 0 0 3px var(--bg-color);
+	box-shadow: 0 0 0 3px #0077B5;
 }
 
 .timeline ul li h3 {
 	margin: 0;
 	padding: 0;
-	font-weight: 600;
-	color: var(--bg-color);
+	font-weight: 300;
+	color: #0077B5;
 }
 
 .timeline ul li p {
+	font-weight: 100;
+	color: #434343;
 	margin: 10px 0 0;
 	padding: 0;
 }
@@ -102,10 +110,10 @@
 	right: -165px;
 	margin: 0;
 	padding: 8px 16px;
-	background-color: var(--bg-color);
+	background-color: #0077B5;
 	color: #fff;
 	border-radius: 18px;
-	box-shadow: 0 0 0 3px var(--bg-color);
+	box-shadow: 0 0 0 3px #0077B5;
 }
 
 .timeline ul li:nth-child(even) .time {
@@ -114,10 +122,10 @@
 	left: -165px;
 	margin: 0;
 	padding: 8px 16px;
-	background-color: var(--bg-color);
+	background-color: #0077B5;
 	color: #fff;
 	border-radius: 18px;
-	box-shadow: 0 0 0 3px var(--bg-color);
+	box-shadow: 0 0 0 3px #0077B5;
 }
 
 @media (max-width: 1000px) {
@@ -129,13 +137,17 @@
 @media (max-width: 767px) {
 	.timeline {
 		width: 100%;
+		margin: 20px auto;
 		padding-bottom: 0;
 	}
 
 	.timeline::before {
-		top: -20px;
 		left: 20px;
-		height: 100%;
+		height: 90%;
+	}
+
+	.timeline h1 {
+		margin-bottom: 50px;
 	}
 
 	.timeline li:nth-child(odd),
